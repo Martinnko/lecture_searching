@@ -44,6 +44,31 @@ def linear_search(sequence, number):
     dict = {"position": pozicia, "count":count}
     return dict
 
+def binary_search(zoznam, number ):
+
+    ind_s = 0
+    while True:
+        stred_ind = int(len(zoznam)/2 )-1
+        stred = zoznam[stred_ind]
+
+        if number == stred:
+            return stred
+
+        elif number > stred:
+            zoznam = zoznam[stred_ind +1:]
+            ind_s = stred_ind +1
+
+        elif number < stred:
+            zoznam += zoznam[:stred_ind]
+
+        else:
+            return None
+
+
+
+
+
+
 
 
 
@@ -53,6 +78,9 @@ def main():
     print(sequential_data)
     dict = linear_search(sequential_data, number = 5)
     print(dict)
+    hotov = binary_search(sequential_data, number=7)
+    print(hotov)
+
 
 
 if __name__ == "__main__":
