@@ -40,7 +40,7 @@ def linear_search(sequence, number):
     for index, numb in enumerate(sequence):
         if number == numb:
             count += 1
-        pozicia.append(index)
+            pozicia.append(index)
     dict = {"position": pozicia, "count":count}
     return dict
 
