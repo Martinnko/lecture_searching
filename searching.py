@@ -65,7 +65,14 @@ def binary_search(zoznam, number ):
             return None
 
 
-
+def pattern_search(sekvencia, vzor):
+    pozicia = set()
+    sekvence_lenght = len(sekvencia)
+    vzor_lenght = len(vzor)
+    for l in range(sekvence_lenght-vzor_lenght):
+        if sekvencia[l:l+vzor_lenght] == vzor:
+            pozicia.add(l)
+    return pozicia
 
 
 
@@ -80,7 +87,8 @@ def main():
     print(dict)
     hotov = binary_search(sequential_data, number=7)
     print(hotov)
-
+    kod = pattern_search(sequential_data, vzor = "ATA")
+    print(kod)
 
 
 if __name__ == "__main__":
