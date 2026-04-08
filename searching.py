@@ -51,6 +51,8 @@ def linear_search(sequence, number):
 def main():
     sequential_data = read_data("sequential.json", "unordered_numbers")
     print(sequential_data)
+    dict = linear_search(sequential_data, number = 5)
+    print(dict)
 
 
 if __name__ == "__main__":
